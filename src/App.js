@@ -1,12 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import { ForceRenderWrapper } from './ForceRender1';
 
 const MyContext = React.createContext({
   theFunction: () => {},
 });
 
 export const MyContextProvider = (props) => {
+
+  console.log("mc rnder");
+
   // function will be regenerated each render
   const theFunction = () => {
     console.log('the function');
